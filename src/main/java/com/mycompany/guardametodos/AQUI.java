@@ -15,21 +15,21 @@ import javax.swing.JOptionPane;
  * @author LOREN
  */
 public class AQUI {
-
+    //metodo que verifica si la suma de 2 numeros es impar
     public static boolean numeroImpar(int n1, int n4) {
         int suma = n1 + n4;
         int resto = suma % 2;
         boolean impar = resto == 0;
         return impar;
     }
-
+    //metodo que verifica si la multiplicacion de 2 numeros es par
     public static boolean numeroPar(int n2, int n3) {
         int multiplicacion = n2 * n3;
         int resultado = multiplicacion % 2;
         boolean par = resultado != 0;
         return par;
     }
-
+    //metodo que da una letra aleatoria de un string
     public static char letraAleatoria() {
         Random random = new Random();
         String letra = "FGHIJKLMNÑOPQRSTUVWX";
@@ -72,6 +72,19 @@ public class AQUI {
         }
         
         return numeroAleatorio;
+    }
+    
+    //método que comprueba q los 4 numeros metidos sean diferentes entre ellos
+    public static boolean numerosDiferentes(int n1, int n2, int n3, int n4) {
+        boolean okay = false;
+        if (!(n1 != n2 && n1 != n3 && n1 != n4
+                && n2 != n3 && n2 != n4
+                && n3 != n4)) {
+            okay = true;
+        }
+
+        return okay;
+
     }
     /**
      * @param args the command line arguments
